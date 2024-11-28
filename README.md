@@ -15,9 +15,16 @@ Here are some screenshots showcasing the outputs:-
 By Default App will show Toronto’s weather and forecast
 
 
+
+
+
 ![Screenshot of Search by city ](assets/search.png)
 
 search by city name and app will show city’s weather and forecast for next 5 days
 
 
+
+
+
 ![Screenshot of City Not Found ](assets/notfound.png)
+If User inputs incorrect city name app will gonna show user below interface saying “City not found”
