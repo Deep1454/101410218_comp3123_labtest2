@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import WeatherApp from "./components/WeatherApp";
-import "./App.css";
+import "./App.css"; 
+import WeatherApp from "./components/WeatherApp"; 
 
 const App = () => {
-  const [city, setCity] = useState("Toronto");  
-  const [searchCity, setSearchCity] = useState("");  
+  const [city, setCity] = useState("Toronto"); 
+  const [searchCity, setSearchCity] = useState(""); 
 
   const handleCityChange = (e) => {
-    setSearchCity(e.target.value);  
+    setSearchCity(e.target.value); 
   };
 
   const handleSearch = () => {
     if (searchCity.trim()) {
-      console.log("Searching for city:", searchCity);
       setCity(searchCity); 
     }
   };
@@ -20,14 +19,16 @@ const App = () => {
   return (
     <div className="app">
       <h1>Weather App</h1>
-      <input
-        type="text"
-        placeholder="Enter city"
-        value={searchCity}
-        onChange={handleCityChange} 
-      />
-      <button onClick={handleSearch}>Search</button>  
-      <WeatherApp city={city} /> 
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Enter city"
+          value={searchCity}
+          onChange={handleCityChange}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+      <WeatherApp city={city} />
     </div>
   );
 };
